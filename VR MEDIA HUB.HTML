@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VR Media Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1f1f1f, #3c3c3c);
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      background: #000;
+      padding: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      font-size: 2.8em;
+      color: #00ffff;
+      margin: 0;
+    }
+
+    .search-box {
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .search-box input {
+      width: 90%;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1em;
+    }
+
+    .section {
+      background-color: #2e2e2e;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      width: 85%;
+      max-width: 600px;
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.03);
+    }
+
+    h2 {
+      color: #ff4081;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      margin: 40px 0;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
+  <script>
+    function filterContent() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const sections = document.querySelectorAll(".section");
+
+      sections.forEach(section => {
+        const text = section.textContent.toLowerCase();
+        if (text.includes(query)) {
+          section.classList.remove("hidden");
+        } else {
+          section.classList.add("hidden");
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>🌟 VR Media Hub</h1>
+    <p>Explore your favorite worlds—streaming, anime, gaming & AI</p>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" oninput="filterContent()" placeholder="Search platforms...">
+  </div>
+
+  <!-- Streaming -->
+  <div class="section">
+    <h2>🎬 Streaming</h2>
+    <p>Free movies and shows at your fingertips.</p>
+    <a href="https://nunflix.org/explore/movie" target="_blank">Nunflix</a><br>
+    <a href="https://xprime.tv/" target="_blank">xPrime</a><br>
+    <a href="https://www.cineby.app/" target="_blank">Cineby</a><br>
+    <a href="https://watch.spencerdevs.xyz/" target="_blank">SpencerDevs</a>
+  </div>
+
+  <!-- Anime -->
+  <div class="section">
+    <h2>🎌 Anime</h2>
+    <p>Stream the best anime series and movies.</p>
+    <a href="https://hianime.to/" target="_blank">HiAnime</a><br>
+    <a href="https://animetsu.to/" target="_blank">AnimeTSU</a><br>
+    <a href="https://animeyy.com/" target="_blank">AnimeYY</a><br>
+    <a href="https://anify.to/" target="_blank">Anify</a>
+  </div>
+
+  <!-- Gaming -->
+  <div class="section">
+    <h2>🎮 Gaming</h2>
+    <p>Game launchers and cracked content.</p>
+    <a href="https://7launcher.com/?lang=en" target="_blank">7Launcher</a><br>
+    <a href="https://online-fix.me/" target="_blank">Online-Fix</a>
+  </div>
+
+  <!-- AI Tools -->
+  <div class="section">
+    <h2>🤖 AI Tools</h2>
+    <p>Explore chat and creativity platforms.</p>
+    <a href="https://chatgpt.com/" target="_blank">ChatGPT</a><br>
+    <a href="https://copilot.microsoft.com/chats/FmHaQNxHNXRHGoqBiooQf" target="_blank">Copilot</a><br>
+    <a href="https://grok.com/" target="_blank">Grok</a><br>
+    <a href="https://chat.deepseek.com/sign_in" target="_blank">DeepSeek</a>
+  </div>
+
+  <!-- Ad Blocking -->
+  <div class="section">
+    <h2>🛡️ Ad Blocking</h2>
+    <p>Block sponsored content automatically.</p>
+    <a href="https://github.com/hanydd/BilibiliSponsorBlock" target="_blank">Bilibili SponsorBlock</a>
+  </div>
+
+  <footer>
+    Made with 🧠 and ⚡ by you • Powered by Viraj rathore 
+  </footer>
+
+</body>
+</html>
